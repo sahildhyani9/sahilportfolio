@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teikametrics</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      color: #111;
+    }
+
+    /* Sticky Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #0a0a0a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      color: #fff;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 35px;
+      margin-right: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    nav ul li:hover {
+      color: #999;
+    }
+
+    .nav-link {
+      color: white;
+      text-decoration: none;
+    }
+
+    .cv-button {
+      border: 1px solid white;
+      padding: 12px 28px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      background-color: transparent;
+      color: white;
+      cursor: pointer;
+    }
+
+    .cv-button:hover {
+      background-color: white;
+      color: #0a0a0a;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 2fr;
+      padding: 60px 80px;
+      gap: 40px;
+    }
+
+    .title-section h1 {
+      font-size: 3.5rem;
+      line-height: 1.2;
+      color: #001133;
+      margin: 0;
+    }
+
+    .details-section h4 {
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+      color: #001133;
+      letter-spacing: 1px;
+    }
+
+    .details-section p {
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .description-section p {
+      margin-bottom: 30px;
+      line-height: 1.7;
+      font-size: 1.05rem;
+      color: #222;
+    }
+
+    .three-box-section {
+      display: flex;
+      flex-direction: row;
+      padding: 60px 80px;
+      gap: 30px;
+      background-color: #f5f7fa;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .three-box {
+      background-color: #fff;
+      padding: 30px 25px;
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      max-width: 400px;
+      flex: 1;
+    }
+
+    .three-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .three-box h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #001133;
+    }
+
+    .three-box p,
+    .three-box ul {
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .device-section {
+      padding: 80px 40px;
+      background: white;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .device,
+    .deviceMobile {
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .device img,
+    .deviceMobile img {
+      width: 100%;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .device:hover img,
+    .deviceMobile:hover img {
+      transform: scale(1.05);
+    }
+
+    .device {
+      width: 650px;
+      max-width: 90vw;
+    }
+
+    .deviceMobile {
+      width: 250px;
+      max-width: 90vw;
+    }
+
+    /* Go Top Button */
+    .ss-go-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 100;
+      display: none;
+      background-color: #000;
+      padding: 10px;
+      border-radius: 50%;
+    }
+
+    .ss-go-top a {
+      display: block;
+      color: white;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .container {
+        grid-template-columns: 1fr;
+        padding: 40px 30px;
+      }
+
+      .title-section h1 {
+        font-size: 2.5rem;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .cv-button {
+        align-self: flex-end;
+      }
+
+      .three-box-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 30px;
+      }
+
+      .device-section {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="index.html" class="nav-link">Home</a>
+    </nav>
+     <a class="cv-button" href="Digital Marketing Manager_Sahil Dhyani.pdf" download>DOWNLOAD CV</a>
+  </header>
+
+  <!-- Case Study Content -->
+  <div class="container">
+    <div class="title-section">
+      <h1>Teikametrics</h1>
+    </div>
+    <div class="details-section">
+      <h4>Year</h4>
+      <p>2022 - 2022</p>
+    </div>
+    <div class="description-section">
+      <p>Teikametrics helps sellers and brand owners optimize performance across top marketplaces and industry verticals. With AI-driven technology and optional managed services, 
+        it removes manual overhead—enabling businesses to focus on what truly matters: creating products and experiences that delight their customers.</p>
+    </div>
+  </div>
+
+
+  <!-- Three Vertical Boxes -->
+  <section class="three-box-section">
+    <div class="three-box">
+      <h3>Challenges</h3><hr>
+      <p>
+      <ul>
+        <li><strong>Targeting High-Value Leads:</strong> The core objective was to acquire Marketing Qualified Leads (MQLs) and Sales Qualified Leads (SQLs) from businesses
+           generating over $1 million in annual revenue on global marketplaces like Amazon, eBay, Flipkart, etc.</li>
+        <li><strong>Unstructured Demand Signals:</strong> The lack of a clearly defined audience profile and inconsistent data across channels made targeting and segmentation
+           complex and imprecise.</li>
+        <li><strong>Fuzzy Buyer Persona:</strong> Limited insight into purchasing behavior, decision-making cycles, and pain points slowed down campaign optimization and increased
+           acquisition costs.</li>
+      </ul> 
+      </p>  
+    </div>
+
+    <div class="three-box">
+      <h3>Solution</h3><hr>
+    <p><strong>Integrated Demand Generation Strategy:</strong>
+    <ul>
+        <li>Ran LinkedIn Ads targeting job titles and industries mapped to marketplace sellers.</li>
+        <li>Launched Facebook Ads for mid-funnel awareness and lead nurturing through retargeting.</li>
+        <li>Deployed Google Search Ads with high-intent keyword targeting to capture bottom-funnel traffic.</li>
+      </ul>
+    <p><strong>Refined Lead Qualification Framework:</strong>
+      <ul>
+        <li>Built custom landing pages with industry-specific messaging and lead scoring models.</li>
+        <li>Applied marketing automation to nurture and qualify leads, improving MQL accuracy and SQL conversion over time.</li>
+      </ul>
+    <p><strong>Data-Driven Optimization:</strong>
+      <ul>
+        <li>Conducted continuous A/B testing on creatives and CTAs.</li>
+        <li>Optimized bidding strategies across platforms to balance cost-per-acquisition (CPA) with lead quality.</li>
+      </ul>
+    </div>
+
+
+    <div class="three-box">
+      <h3>Result</h3><hr>
+      <p><strong>Lead Generation & Conversion:</strong>
+      <ul>
+        <li>800+ leads generated, with 23% qualifying as MQLs — a strong indicator of strategic targeting.</li>
+        <li>5.3% SQL conversion rate sustained over the first quarter, validating campaign maturity and improved pipeline quality.</li>
+      </ul>
+      </p>
+      
+      <p><strong>Strong ROI Metrics:</strong>
+      <ul>
+        <li>Maintained an average $520 CPA while supporting a $12,000 Lifetime Value (LTV) per customer — resulting in highly profitable acquisition.</li>
+        <li>Overall lead-to-customer pipeline performance improved by 230% in efficiency year over year.</li>
+      </ul>
+      </p>
+    </div>
+  </section>
+
+  <!-- Device Showcase -->
+  <section class="device-section">
+    <div class="device">
+      <img src="Teika1.png" alt="Device 1">
+    </div>
+     <div class="deviceMobile">
+      <img src="Teika2.png" alt="Device 2">
+    </div>
+  </section>
+
+  <!-- Go to Top Button -->
+  <div class="ss-go-top" id="goTop">
+    <a class="smoothscroll" title="Back to Top" href="#top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+        <path d="M12 0l8 9h-6v15h-4v-15h-6z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  
+  <!-- Show Go to Top Button after Scroll -->
+  <script>
+    const goTopBtn = document.getElementById('goTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        goTopBtn.style.display = 'block';
+      } else {
+        goTopBtn.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
